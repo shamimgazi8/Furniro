@@ -180,12 +180,18 @@ p {
 right: 0;
 position: absolute;
 font-weight: 600;
-color: red;
+color: rgb(255, 255, 255);
+height: 13px;
+width: 13px;
+display: flex;
+justify-content: center;
+align-items: center;
 border-radius: 100%;
 padding: 2px;
- bottom: 0;
- right: 10;
+bottom: 0;
+margin-right: 5px;
 size: 30px;
+background-color: #7bd891;
 }
 .cards-container {
   display: flex;

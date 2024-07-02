@@ -241,6 +241,7 @@ useEffect(() => {
   const removeItem = id => {
     setCartItems(cartItems.filter(item => item.id !== id));
   };
+
   return (
     <div className="nav-right">
       <Popover
@@ -257,7 +258,7 @@ useEffect(() => {
         onOpenChange={handleOpenChange}
       >
         <button className=" cartbtn">
-          <span className=' count-cart'>2</span>
+          <span className=' count-cart'>{cartItemsrtk?.length}</span>
           <ShoppingCartOutlined className="carticon" />
         </button>
       </Popover>

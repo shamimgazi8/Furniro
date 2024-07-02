@@ -27,9 +27,7 @@ function App() {
         setIsSticky(false);
       }
     };
-
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -38,8 +36,6 @@ function App() {
   return (
     <Router>
        <div className={`App `}>
-        
-         
           <nav className={`navbar ${isSticky ? 'sticky' : ''}`}>
           <a href="/">
             <img

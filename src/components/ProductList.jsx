@@ -130,9 +130,6 @@ const OurProduct = ({ image, title }) => {
 }
 
 let mergedArray1 = mergeAndMarkIsCart(products,cartItemsrtk, 'id');
-
-
-
   return (
     <div className="product-list">
       <h2>Our Products</h2>
