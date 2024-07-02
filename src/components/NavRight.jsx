@@ -257,6 +257,7 @@ useEffect(() => {
         onOpenChange={handleOpenChange}
       >
         <button className=" cartbtn">
+          <span className=' count-cart'>2</span>
           <ShoppingCartOutlined className="carticon" />
         </button>
       </Popover>

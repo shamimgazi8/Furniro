@@ -109,11 +109,11 @@
 .coverspan {
   font-size: 40px;
   font-weight: 500;
-  color: #bd8c1b;
+  color: #ebb12a;
 }
 
 .buy-button {
-  background-color: #bd8c1b; /* Green background */
+  background-color: #f4b626; /* Green background */
   border: none; /* Remove borders */
   color: white; /* White text */
   padding: 14px 24px; /* Padding */
@@ -176,6 +176,17 @@ p {
   font-weight: bold;
   color: #333;
 }
+.count-cart{
+right: 0;
+position: absolute;
+font-weight: 600;
+color: red;
+border-radius: 100%;
+padding: 2px;
+ bottom: 0;
+ right: 10;
+size: 30px;
+}
 .cards-container {
   display: flex;
   gap: 16px;
@@ -184,10 +195,11 @@ p {
   background-color: white;
   border: none;
   cursor: pointer;
+  position: relative;
 }
 .carticon {
   font-size: 30px;
-  color: #bd8c1b;
+  color: #eeac11;
   background-color: white;
 }
 
