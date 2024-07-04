@@ -1,8 +1,9 @@
 import React from 'react';
 import CardDesign from './Card';
-
 import { Carousel } from 'antd';
 import OurProduct from './ProductList';
+import BestOnlineStore from './BestOnlineFurniture';
+import WhyChooseUs from './WhyChoseUs';
 const cardsData = [
   {
     image:
@@ -58,10 +59,24 @@ const HomePage = ({ image, title }) => {
   return (
     <div className="">
       <div className="mainDiv">
-        <>
-          <img className="cover" src="/cover.png" alt="cover photo" />
-        </>
-        <div className="coverDiv">
+        <div className='cover'>
+        <Carousel autoplay fade={true} infinite={true}>
+      <div>
+         <img className="cover" src="/cover.png" alt="cover photo" />
+      </div>
+      <div>
+         <img className="cover" src="https://en.idei.club/uploads/posts/2023-06/1687292696_en-idei-club-p-sofa-on-blue-background-dizain-instagram-1.jpg" alt="cover photo" />
+      </div>
+      <div>
+         <img className="cover" src="https://en.idei.club/uploads/posts/2023-06/1687335561_en-idei-club-p-wall-with-sofa-dizain-krasivo-21.jpg" alt="cover photo" />
+      </div>
+      <div>
+         <img className="cover" src="https://d1csarkz8obe9u.cloudfront.net/posterpreviews/furniture-cover-design-template-e0a9255cf40ce6c2a7b5952a302344e5_screen.jpg?ts=1626612832" alt="cover photo" />
+      </div>
+    </Carousel>
+    <br />
+
+    <div className="coverDiv">
           <div className=" coverText">
             <span>New Arrival</span>
             <span className="coverspan">Discover Our</span>
@@ -79,6 +94,8 @@ const HomePage = ({ image, title }) => {
             </div>
           </div>
         </div>
+        </div>
+      
         <div className=" cover2">
           <h1>Browse The Range</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
@@ -93,7 +110,7 @@ const HomePage = ({ image, title }) => {
       <div>
         <div className="photo-gallery">
           <h2>Our Photo Gallery</h2>
-          <Carousel autoplay dots>
+          <Carousel autoplay arrows dots>
             {photoData.map(photo => (
               <div key={photo.id} className="carousel-item">
                 <img className="car-img" src={photo.src} alt={photo.alt} />
@@ -102,6 +119,8 @@ const HomePage = ({ image, title }) => {
           </Carousel>
         </div>
       </div>
+      <BestOnlineStore/>
+      <WhyChooseUs />
     </div>
   );
 };

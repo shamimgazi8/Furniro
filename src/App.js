@@ -40,7 +40,7 @@ function App() {
           <a href="/">
             <img
               className="logo"
-              src="https://png.pngtree.com/template/20190928/ourmid/pngtree-gold-furniture-lamp-chair-interior-logo-design-template-inspirat-image_312127.jpg"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_1KkSJCsqCyCJL44TKna6Zf3EnqzUZskCPg&s"
               alt="logo"
             />
           </a>

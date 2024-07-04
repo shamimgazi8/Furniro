@@ -6,18 +6,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  transition: all 0.3s ease;
+
 }
 
 .sticky {
    /* filter: blur(8px);
   -webkit-filter: blur(8px); */
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   position: fixed;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
   z-index: 1000; /* Ensure the navigation bar is above other content */
   
@@ -66,15 +67,15 @@
   transition: 0.3s;
 }
 .navDiv {
-  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
+  margin: 10px;
   padding-left: 30px;
-  height: 90px;
-  width: 90px;
+  height: 50px;
+  width: 200px;
   z-index: 1200;
   object-fit: cover;
 }
@@ -86,6 +87,7 @@
 .cover {
   height: 800px;
   width: 100%;
+  position: relative;
   object-fit: cover;
 }
 .describtion {
@@ -98,7 +100,8 @@
   border-radius: 10px;
   position: absolute;
   background-color: #fff3e3;
-  top: 30%;
+  top: 20%;
+  right: 10%;
   left: 60%;
 }
 
@@ -584,6 +587,7 @@ background-color: #7bd891;
   color: #28a745;
   font-size: 16px;
 }
+
 .about-us {
   width: 70%;
   margin: auto;
@@ -591,7 +595,6 @@ background-color: #7bd891;
   font-family: Arial, sans-serif;
   line-height: 1.6;
 }
-
 .about-us h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -617,7 +620,11 @@ background-color: #7bd891;
 .about-us li {
   margin-bottom: 5px;
 }
-
+.onlineHeading{
+  border-bottom: 2px solid gainsboro;
+  padding-bottom: 10px;
+  margin-top: 20px;
+}
 .team-photos {
   display: flex;
   justify-content: space-around;
@@ -987,4 +994,94 @@ button:hover {
 }
 .btnbuynow > a {
   text-decoration: none;
+}
+/* src/WhyChooseUs.css */
+.why-choose-us {
+  text-align: center;
+  padding: 20px;
+}
+
+.why-choose-us h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.feature {
+  text-align: center;
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.feature img {
+  width: 50px;
+  height: 50px;
+
+}
+
+.feature h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  padding-top: 0px;
+}
+
+.feature p {
+  font-size: 14px;
+  color: #555;
+}
+/* src/SocialFollow.css */
+.social-follow {
+  text-align: center;
+  padding: 20px;
+
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin: 20px;
+}
+
+.social-follow h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icon {
+  font-size: 24px;
+  color: #ffffff;
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: #000;
+}
+
+.icon.facebook:hover {
+  color: #3b5998;
+}
+
+.icon.twitter:hover {
+  color: #00acee;
+}
+
+.icon.instagram:hover {
+  color: #e4405f;
+}
+
+.icon.linkedin:hover {
+  color: #0e76a8;
 }

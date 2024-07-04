@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialFollow from './SocialShare';
 
 const Footer = () => (
   <footer className="footer">
@@ -17,32 +18,15 @@ const Footer = () => (
       </div>
       <div className="footer-section">
         <h4>Follow Us</h4>
-        <div className="social-icons">
-          <a
-            href="https://www.facebook.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-facebook-f"></i>
-          </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-twitter"></i>
-          </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fab fa-instagram"></i>
-          </a>
-        </div>
+      <SocialFollow />
       </div>
     </div>
     <div className="footer-bottom">
+    <img
+              className="logo"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGDoLhqiWBc-404AEbL9IEmeRG3u6OTbWSAA&s"
+              alt="logo"
+            />
       <p>
         &copy; {new Date().getFullYear()} Furniture Shop. All rights reserved.
       </p>
