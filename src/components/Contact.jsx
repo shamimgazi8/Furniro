@@ -1,4 +1,5 @@
 import React from 'react';
+import SocialFollow from './SocialShare';
 
 const Contactpage = ({ image, title }) => {
   return (
@@ -51,6 +52,10 @@ const Contactpage = ({ image, title }) => {
           </div>
         </div>
       </section>
+      <div className=' social_follow'>
+
+      <SocialFollow />
+      </div>
 
       <section className="contact-form">
         <h3>Contact Form</h3>

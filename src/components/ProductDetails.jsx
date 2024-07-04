@@ -2,8 +2,10 @@ import React from 'react';
 
 
 const ProductDetails = () => {
+
     return (
         <div className="product-page">
+        
             <div className="product-image">
                 <img className='ProductDetailsPhoto' src="https://hatil-image.s3.ap-southeast-1.amazonaws.com/master_image/Kingston-136%20.png" alt="Wooden Cupboard" />
                 <img className='ProductDetailsPhoto' src="https://m.media-amazon.com/images/I/61TWbJDdLLL._AC_UF894,1000_QL80_.jpg" alt="Wooden Cupboard" />

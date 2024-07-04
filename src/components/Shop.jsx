@@ -132,7 +132,7 @@ let mergedArray1 = mergeAndMarkIsCart(products,cartItemsrtk, 'id');
       <h2>Shop</h2>
       <div className="products">
         {mergedArray1.map(product => (
-             <a className='ProductDetails' href={`shop/details`}>
+             <a className='ProductDetails' href={`shop/${product?.slug}`}>
           <div  className="product" key={product.id}>
             <img
               src={product.image}

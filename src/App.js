@@ -10,6 +10,7 @@ import ShopPage from './components/Shop';
 import CollectionPage from './components/Collection';
 import CheckoutPage from './components/Checkout';
 import ProductDetails from './components/ProductDetails';
+import InteriorPage from './components/Interior';
 const NotFound = () => (
   <div className="no-page-found">
   <div className="content">
@@ -20,7 +21,31 @@ const NotFound = () => (
 </div>
 );
 
+
 function App() {
+  const getSlugFromUrl = () => {
+    // Get the current URL
+    const url = window.location.href;
+    
+    // Split the URL by '/' to get individual parts
+    const parts = url.split('/');
+    
+    // The last part of the URL typically contains the slug
+    const lastPart = parts[parts.length - 1];
+    
+    // Clean and transform the last part into a slug
+    const slug = lastPart
+      .toLowerCase()                      // Convert to lowercase
+      .replace(/[^\w-]+/g, '-')           // Replace non-word characters with -
+      .replace(/--+/g, '-')               // Replace multiple - with single -
+      .replace(/^-+/, '')                 // Remove leading -
+      .replace(/-+$/, '');                // Remove trailing -
+      
+    return slug;
+  };
+
+  // Get the slug
+  const slug = getSlugFromUrl();
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -65,6 +90,11 @@ function App() {
                   Collections
                 </NavLink>
               </li>
+              <li className="nav-item">
+                <NavLink to="/interior" className="nav-link" activeClassName="active">
+                  Interior
+                </NavLink>
+              </li>
 
               <li className="nav-item">
                 <NavLink to="/about" className="nav-link" activeClassName="active">
@@ -86,11 +116,12 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/shop" element={<ShopPage />} />
-          <Route path="/shop/details" element={<ProductDetails />} />
+          <Route path={`/shop/${slug}`} element={<ProductDetails />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/contact" element={<Contactpage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
-          
+          <Route path="/interior" element={<InteriorPage />} />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

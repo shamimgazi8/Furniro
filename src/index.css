@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+.social_follow{
+  margin: auto;
+  width: 70%;
+  background-color: black;
+  
+}
