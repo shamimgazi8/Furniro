@@ -9,11 +9,15 @@ import Footer from './components/Footer';
 import ShopPage from './components/Shop';
 import CollectionPage from './components/Collection';
 import CheckoutPage from './components/Checkout';
+import ProductDetails from './components/ProductDetails';
 const NotFound = () => (
-  <div>
-    <h1>404 Not Found</h1>
-    <p>Sorry, the page you are looking for does not exist.</p>
+  <div className="no-page-found">
+  <div className="content">
+      <h1>404</h1>
+      <p>Oops! The page you're looking for doesn't exist.</p>
+      <a href="/" className="home-link">Go to Homepage</a>
   </div>
+</div>
 );
 
 function App() {
@@ -82,9 +86,11 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/shop" element={<ShopPage />} />
+          <Route path="/shop/details" element={<ProductDetails />} />
           <Route path="/collection" element={<CollectionPage />} />
           <Route path="/contact" element={<Contactpage />} />
           <Route path="/checkout" element={<CheckoutPage />} />
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

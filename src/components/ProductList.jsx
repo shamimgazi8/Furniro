@@ -135,15 +135,19 @@ let mergedArray1 = mergeAndMarkIsCart(products,cartItemsrtk, 'id');
       <h2>Our Products</h2>
       <ul className=" product-ul">
         {mergedArray1.map(product => (
+         
           <li key={product.id} className="product-item">
+             <a className='ProductDetails' href={`shop/details`}>
             <img src={product.image} alt={product.name} />
             <h3>{product.name}</h3>
             <p className='product_description'>{product.description}</p>
+            </a>
             {product.discountedPrice ? (
               <span className="price">
                 <strikethrough>{product.price}</strikethrough> $
                 {product.discountedPrice}
               </span>
+               
             ) : (
               <span className="price">${product.price}</span>
             )}
@@ -151,6 +155,7 @@ let mergedArray1 = mergeAndMarkIsCart(products,cartItemsrtk, 'id');
             {product?.isCart===true? <button className='addtocartButton addtocartButtonadd'>Added successfully 🔵</button>: <button onClick={() => handleAddItem(product)} className=" addtocartButton"> Add to Cart 🛒</button>
 }
           </li>
+       
         ))}
       </ul>
     </div>
